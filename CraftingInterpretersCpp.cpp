@@ -1,5 +1,8 @@
 ﻿import common;
+import chunk;
+import debug;
 
-int main(int argc, const char* argv[]) {
-	hello();
+int main() {
+	auto chunks = Chunk{ OpCode::OP_RETURN };
+	disassembleChunk(chunks, "test chunk");
 }

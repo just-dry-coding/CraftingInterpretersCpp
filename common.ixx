@@ -1,7 +1,7 @@
+#include <iostream>
+
 export module common;
 
-import std.core;
-
-export void hello() {
-	cout << "hello";
+export enum class OpCode : uint8_t {
+	OP_RETURN,
 };
