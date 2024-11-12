@@ -1,2 +1,5 @@
 .vs/
 out/
+*.pdb
+*.idp
+*.idb

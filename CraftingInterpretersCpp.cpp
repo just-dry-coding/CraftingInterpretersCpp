@@ -1,9 +1,5 @@
-﻿#include "CraftingInterpretersCpp.h"
+﻿import common;
 
-using namespace std;
-
-int main()
-{
-	cout << "Hello CMake." << endl;
-	return 0;
+int main(int argc, const char* argv[]) {
+	hello();
 }
