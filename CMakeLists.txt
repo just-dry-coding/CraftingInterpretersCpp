@@ -3,6 +3,9 @@
 #
 cmake_minimum_required (VERSION 3.12)
 
+if (MSVC)
+    add_compile_options(/EHsc /MD)
+endif()
 
 
 # Enable Hot Reload for MSVC compilers if supported.
