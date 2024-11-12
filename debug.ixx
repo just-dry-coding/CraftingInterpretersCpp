@@ -1,9 +1,9 @@
 import chunk;
-#include <string_view>
+#include <string>
 
 
 export module debug;
 
-export void disassembleChunk(Chunk const& chunk, std::string_view const & name);
-export int disassembleInstruction(Chunk const& chunk, int offset);
+export void disassembleChunk(Chunk const& chunk, std::string const & name);
+export int disassembleInstruction(OpCode chunk, int offset);
 
