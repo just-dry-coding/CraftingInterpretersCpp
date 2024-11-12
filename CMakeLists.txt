@@ -18,3 +18,19 @@ add_executable(CraftingInterpretersCpp
     "common.ixx" "debug.ixx" "debug.cpp")
 
 set_property(TARGET CraftingInterpretersCpp PROPERTY CXX_STANDARD 20)
+
+
+# UnitTesting
+Include(FetchContent)
+
+FetchContent_Declare(
+  Catch2
+  GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+  GIT_TAG        v3.7.1
+)
+
+FetchContent_MakeAvailable(Catch2)
+
+add_executable(tests 
+    "test/debug_test.cpp")
+target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
