@@ -15,17 +15,20 @@ void disassembleChunk(Chunk const& chunk, std::string const& name)
 	}
 }
 
-
-int disassembleInstruction(OpCode code, int offset)
+int disassembleInstruction(Instruction const& instruction, int offset)
 {
 	std::print("{}\t", offset);
-	switch (code) {
+	switch (instruction.opCode) {
 	case OpCode::OP_RETURN:
 		return simpleInstruction("OP_RETURN", offset);
+	default:
+		std::print("unknow code");
+		return offset + 1;
 	}
+
 }
 
 int simpleInstruction(std::string const& name, int offset) {
-	std::print("{}", name);
+	std::print("{}\n", name);
 	return offset + 1;
 }

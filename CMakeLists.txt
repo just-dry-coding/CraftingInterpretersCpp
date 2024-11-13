@@ -13,7 +13,7 @@ endif()
 
 # Add source to this project's executable.
 add_executable(CraftingInterpretersCpp 
-    "CraftingInterpretersCpp.cpp"
+    "main.cpp"
     "chunk.ixx"
     "common.ixx" 
     "debug.ixx"
