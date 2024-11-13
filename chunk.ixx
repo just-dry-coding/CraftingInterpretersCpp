@@ -7,6 +7,7 @@ export module chunk;
 
 export struct Instruction {
 	OpCode opCode;
+	unsigned int line;
 };
 
 export struct SimpleInstruction : Instruction{
