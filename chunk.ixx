@@ -1,7 +1,10 @@
 #include <vector>
 import common;
+import value;
 
 export module chunk;
 
 
-export using Chunk = std::vector<OpCode>;
+export class Chunk : public std::vector<OpCode> {
+	ValueArr constants;
+};

@@ -3,6 +3,7 @@ import chunk;
 import debug;
 
 int main() {
-	auto chunks = Chunk{ OpCode::OP_RETURN };
+	auto chunks = Chunk{};
+	chunks.push_back(OpCode::OP_RETURN);
 	disassembleChunk(chunks, "test chunk");
 }

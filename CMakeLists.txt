@@ -15,7 +15,10 @@ endif()
 add_executable(CraftingInterpretersCpp 
     "CraftingInterpretersCpp.cpp"
     "chunk.ixx"
-    "common.ixx" "debug.ixx" "debug.cpp")
+    "common.ixx" 
+    "debug.ixx"
+    "debug.cpp"
+    "value.ixx")
 
 set_property(TARGET CraftingInterpretersCpp PROPERTY CXX_STANDARD 20)
 
