@@ -6,5 +6,5 @@ import common;
 export module debug;
 
 export void disassembleChunk(Chunk const& chunk, std::string const & name);
-export void disassembleInstruction(Instruction const& chunk, int offset);
+export void disassembleInstruction(Chunk const& chunk, unsigned int offset);
 
