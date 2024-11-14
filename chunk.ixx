@@ -25,6 +25,17 @@ export class Chunk {
 	RunLengthEncoding<size_t> m_lineInfo;
 
 public:
+	size_t size() const {
+		return m_instructions.size();
+	}
+
+	Instruction& operator[](size_t idx) {
+		return m_instructions[idx];
+	}
+	Instruction const& operator[](size_t idx) const {
+		return m_instructions[idx];
+	}
+
 	void push_back(OpCode opCode, size_t lineInfo) {
 		m_lineInfo.add(lineInfo);
 		m_instructions.push_back(SimpleInstruction{ opCode });
@@ -33,7 +44,7 @@ public:
 	void push_back(OpCode opCode, Value constant, size_t lineInfo) {
 		m_lineInfo.add(lineInfo);
 		auto const constantIndex = addConstant(constant);
-		m_instructions.push_back(ConstantInstruction(opCode, constant));
+		m_instructions.push_back(ConstantInstruction{ opCode, constantIndex });
 	}
 	Value getConstant(size_t const index) const {
 		return m_constants[index];
