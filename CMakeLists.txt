@@ -18,7 +18,8 @@ add_executable(CraftingInterpretersCpp
     "common.ixx" 
     "debug.ixx"
     "debug.cpp"
-    "value.ixx")
+    "value.ixx" 
+    "RunLengthEncoding.ixx")
 
 set_property(TARGET CraftingInterpretersCpp PROPERTY CXX_STANDARD 20)
 
@@ -35,5 +36,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(Catch2)
 
 add_executable(tests 
-    "test/debug_test.cpp")
+    "test/RunLengthEncoding_test.cpp" "RunLengthEncoding.ixx")
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
+
+target_include_directories(tests PRIVATE ${Catch2_SOURCE_DIR}/include)
