@@ -1,11 +1,11 @@
 #include <vector>
 #include <map>
 
-import value;
-import common;
+import Value;
+import Common;
 import RunLengthEncoding;
 
-export module chunk;
+export module Chunk;
 
 export struct Instruction {
 	OpCode opCode;

@@ -1,6 +1,6 @@
 #include <iostream>
 
-export module common;
+export module Common;
 
 export enum class OpCode : uint8_t {
 	OP_CONSTANT = 0,

@@ -1,6 +1,6 @@
-﻿import common;
-import chunk;
-import debug;
+﻿import Common;
+import Chunk;
+import Debug;
 
 int main() {
 	auto chunks = Chunk{};

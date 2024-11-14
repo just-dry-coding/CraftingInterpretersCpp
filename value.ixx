@@ -1,6 +1,6 @@
 #include <vector>
 
-export module value;
+export module Value;
 
 export using Value = double;
 
