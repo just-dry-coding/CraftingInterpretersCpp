@@ -38,5 +38,3 @@ FetchContent_MakeAvailable(Catch2)
 add_executable(tests 
     "test/RunLengthEncoding_test.cpp" "RunLengthEncoding.ixx")
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
-
-target_include_directories(tests PRIVATE ${Catch2_SOURCE_DIR}/include)
