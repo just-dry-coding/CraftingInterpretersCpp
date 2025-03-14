@@ -41,16 +41,23 @@ public:
 		m_instructions.push_back(SimpleInstruction{ opCode });
 		
 	}
+
 	void push_back(OpCode opCode, Value constant, size_t lineInfo) {
 		m_lineInfo.add(lineInfo);
 		auto const constantIndex = addConstant(constant);
 		m_instructions.push_back(ConstantInstruction{ opCode, constantIndex });
 	}
+
 	Value getConstant(size_t const index) const {
 		return m_constants[index];
 	}
+
 	size_t getLineInfo(size_t instructionIndex) const {
 		return m_lineInfo.get(instructionIndex);
+	}
+
+	Instruction const& getInstruction(size_t instructionIndex) const {
+		return m_instructions[instructionIndex];
 	}
 
 private:
