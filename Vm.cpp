@@ -54,14 +54,13 @@ InterpretResult run() {
     }
     case OpCode::RETURN: {
         std::print("{}", vm.stack.pop());
-        return InterpretResult::INTERPRET_OK;
+        return InterpretResult::OK;
       }
     }
   }
 }
 
-InterpretResult interpret(Chunk* chunk) {
-  vm.chunk = chunk;
-  vm.ip = 0;
-  return run();
+InterpretResult interpret(std::string const& source) {
+  compile(source);
+  return InterpretResult::OK;
 }

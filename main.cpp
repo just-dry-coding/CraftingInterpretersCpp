@@ -31,9 +31,8 @@ static std::string readFile(const char* path) {
 void runFile(const char* path) {
   std::string source = readFile(path);
   InterpretResult result = interpret(source);
-
-  if (result == INTERPRET_COMPILE_ERROR) exit(65);
-  if (result == INTERPRET_RUNTIME_ERROR) exit(70);
+  if (result == InterpretResult::COMPILE_ERROR) exit(65);
+  if (result == InterpretResult::RUNTIME_ERROR) exit(70);
 }
 
 int main(int argc, char* argv[]) {

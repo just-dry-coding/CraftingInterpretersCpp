@@ -7,6 +7,7 @@ import Stack;
 #include <memory>
 #include <iterator>
 #include <vector>
+#include <string>
 
 export module Vm;
 
@@ -18,9 +19,9 @@ public:
 };
 
 export enum class InterpretResult {
-  INTERPRET_OK,
-  INTERPRET_COMPILE_ERROR,
+  OK,
+  COMPILE_ERROR,
   INTERPRET_RUNTIME_ERROR
 };
 
-export InterpretResult interpret(Chunk* chunk);
+export InterpretResult interpret(std::string const& source);
