@@ -1,4 +1,4 @@
-export module compiler;
+export module Compiler;
 
 #include <string>
 

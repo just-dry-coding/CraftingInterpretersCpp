@@ -61,6 +61,15 @@ InterpretResult run() {
 }
 
 InterpretResult interpret(std::string const& source) {
-  compile(source);
+  Chunk chunk;
+
+  if (!compile(source, chunk))
+    return InterpretResult::COMPILE_ERROR;
+
+  vm.chunk = &chunk;
+  vm.ip = chunk.begin();
+
+  InterpretResult resutl = run();
+
   return InterpretResult::OK;
 }

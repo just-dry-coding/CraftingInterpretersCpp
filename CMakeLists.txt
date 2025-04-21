@@ -45,7 +45,7 @@ add_executable(CraftingInterpretersCpp
     "RunLengthEncoding.ixx" 
     "Vm.ixx" "Vm.cpp" 
     "Stack.ixx" "Stack.cpp"
- "compiler.ixx")
+ "compiler.ixx" "compiler.cpp" "scanner.ixx" "scanner.cpp")
 
 target_link_libraries(CraftingInterpretersCpp
     PRIVATE glog::glog gflags::gflags
